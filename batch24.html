@@ -17,7 +17,6 @@
   display: flex;
   align-items: center;
 }
-
 .headline-text {
   position: absolute;
   white-space: nowrap;
@@ -26,7 +25,6 @@
   color: #222;
   animation: scroll-left 7s linear;
 }
-
 @keyframes scroll-left {
   0%   { right: -100%; }
   100% { right: 100%; }
@@ -43,17 +41,15 @@
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    overflow-x: hidden; /* যাতে পাশে স্ক্রল না আসে */
-    overflow-y: auto;   /* যাতে উপরে-নিচে স্ক্রল হয় */
+    overflow-x: hidden;
+    overflow-y: auto; 
 }
-
 body {
     position: relative;
     margin: 0;
     padding: 0;
     min-height: 100vh;
 }
-
 /* Watermark effect */
 body::before {
     content: "";
@@ -63,12 +59,10 @@ body::before {
     width: 100%;
     height: 100%;
     background: url("logo.png.PNG") no-repeat center center;
-    background-size: 500px;   /* লোগোর সাইজ নিয়ন্ত্রণ করবে */
-    opacity: 0.2;            /* জলছাপের স্বচ্ছতা */
-    z-index: -1;              /* সব কনটেন্টের পিছনে রাখবে */
+    background-size: 500px;   
+    opacity: 0.2;           
+    z-index: -1;              
 }
-
-
     /* Navbar */
     .navbar {
       display: flex;
@@ -108,7 +102,6 @@ body::before {
     .menu a:hover {
       background: #000000;
     }
-
     /* Sections */
     .section {
       display: none;
@@ -120,7 +113,6 @@ body::before {
     h2 {
       text-align: center;
     }
-
     /* Home Banner */
     .banner {
       height: 400px;
@@ -143,7 +135,6 @@ body::before {
       font-size: 20px;
       margin-top: 10px;
     }
-
     /* Cards */
     .container {
       display: flex;
@@ -185,7 +176,6 @@ body::before {
     .btn-call { background: #000000; }
     .btn-email { background: #000000; }
     .btn:hover { opacity: 0.8; }
-
     /* Responsive */
     @media (max-width: 768px) {
       .menu {
@@ -202,7 +192,6 @@ body::before {
       .card { width: 90%; }
       .banner h1 { font-size: 28px; }
     }
-
     /* Footer Style */
 footer {
   background: #badcec94;
@@ -211,16 +200,13 @@ footer {
   text-align: center;
   margin-top: 40px;
 }
-
 footer p {
   margin: 5px 0;
   font-size: 15px;
 }
-
 footer .social-icons {
   margin-top: 10px;
 }
-
 footer .social-icons a {
   color: #000000;
   margin: 0 10px;
@@ -228,16 +214,12 @@ footer .social-icons a {
   font-size: 14px;
   transition: color 0.5s;
 }
-
 footer .social-icons a:hover {
-  color: #00aced; /* Hover এ রঙ পরিবর্তন */
+  color: #00aced; 
 }
-
-
   </style>
 </head>
 <body>
-
   <!-- Navigation Bar -->
   <div class="navbar">
     <div class="logo">
@@ -251,13 +233,10 @@ footer .social-icons a:hover {
       <a href="#" onclick="showSection('partofus')">PART OF US</a>
     </div>
   </div>
-
   <!-- Headline bar -->
 <div class="headline-bar">
   <div class="headline-text" id="headline"></div>
 </div>
- 
-  
   <!-- Home Section -->
   <div id="home" class="section active">
     <div class="banner">
@@ -268,7 +247,6 @@ footer .social-icons a:hover {
     </div>
     <p style="text-align:center; margin-top:20px;"></br><br>"আমাদের লক্ষ্যঃ"<br><br>“আমাদের লক্ষ্য হলো দেশের যুবসমাজকে আধুনিক শিক্ষা, প্রযুক্তি ও নৈতিক মানের সমন্বয়ে সমৃদ্ধ করা। আমরা চাই প্রত্যেক শিক্ষার্থী দক্ষ, সৃজনশীল ও সাহসী হয়ে উঠুক, যাতে তারা দেশ ও সমাজের উন্নয়নে গুরুত্বপূর্ণ অবদান রাখতে পারে। আমাদের প্রতিষ্ঠান দৃঢ় বিশ্বাস করে যে শিক্ষা শুধু জ্ঞান অর্জন নয়, বরং মানসিক ও নৈতিক বিকাশের পথ। আমরা সবাইকে সমান সুযোগ দিয়ে প্রতিভা বিকাশে সহায়তা করতে প্রতিশ্রুতিবদ্ধ, যাতে তারা ভবিষ্যতের চ্যালেঞ্জ মোকাবিলা করতে পারে এবং দেশের গৌরব বৃদ্ধি করতে পারে।”“আমাদের লক্ষ্য হলো দেশের যুবসমাজকে আধুনিক শিক্ষা, প্রযুক্তি ও নৈতিক মানের সমন্বয়ে সমৃদ্ধ করা। আমরা চাই প্রত্যেক শিক্ষার্থী দক্ষ, সৃজনশীল ও সাহসী হয়ে উঠুক, যাতে তারা দেশ ও সমাজের উন্নয়নে গুরুত্বপূর্ণ অবদান রাখতে পারে। আমাদের প্রতিষ্ঠান দৃঢ় বিশ্বাস করে যে শিক্ষা শুধু জ্ঞান অর্জন নয়, বরং মানসিক ও নৈতিক বিকাশের পথ। আমরা সবাইকে সমান সুযোগ দিয়ে প্রতিভা বিকাশে সহায়তা করতে প্রতিশ্রুতিবদ্ধ, যাতে তারা ভবিষ্যতের চ্যালেঞ্জ মোকাবিলা করতে পারে এবং দেশের গৌরব বৃদ্ধি করতে পারে।”</p>
   </div>
-
   <!-- Batch Co-ordinators Panel -->
   <div id="coordinators" class="section">
     <h2>BATCH(24) CO-ORDINATOR's</h2>
@@ -293,7 +271,6 @@ footer .social-icons a:hover {
       </div>
     </div>
   </div>
-
   <!-- Members Section -->
   <div id="members" class="section">
     <h2>BATCH MEMBERS</h2>
@@ -318,7 +295,6 @@ footer .social-icons a:hover {
       </div>
     </div>
   </div>
-
   <!-- Part Of Us Section -->
   <div id="partofus" class="section">
     <h2>PART OF OUR JOURNEY</h2>
@@ -343,7 +319,6 @@ footer .social-icons a:hover {
       </div>
     </div>
   </div>
-
   <!-- Prefectorial Board -->
   <div id="prefectorial" class="section">
     <h2>PREFECTS OF 2024</h2>
@@ -368,7 +343,6 @@ footer .social-icons a:hover {
       </div>
     </div>
   </div>
-
   <script>
     function showSection(sectionId) {
       let sections = document.getElementsByClassName("section");
@@ -377,12 +351,10 @@ footer .social-icons a:hover {
       }
       document.getElementById(sectionId).classList.add("active");
     }
-
 const headlines = [
   "✨ WELCOME BACK TO OUR CLASS! ✨",
   "📌 This official webpage of our batch functions as the primary platform for storing and accessing the complete information of all our students.",
 ];
-
 let index = 0;
 const headlineElement = document.getElementById("headline");
 
@@ -394,29 +366,20 @@ function showHeadline() {
 
   index = (index + 1) % headlines.length;
 }
-
 showHeadline();
-setInterval(showHeadline, 13000); // প্রতি 11 সেকেন্ড পর নতুন headline আসবে
-
- // লেখা সিলেক্ট বন্ধ
+setInterval(showHeadline, 13000); 
   document.addEventListener('selectstart', function(e) {
     e.preventDefault();
   });
-
-  // কপি কমান্ড বন্ধ
   document.addEventListener('copy', function(e) {
     e.preventDefault();
     alert("কপি করা যাবে না!");
   });
-
-  // রাইট-ক্লিক বন্ধ
   document.addEventListener('contextmenu', function(e) {
     e.preventDefault();
     alert("Right Click Disabled!");
   });
-
   </script>
-
 <!-- Footer Section -->
 <footer>
   <p>Important Links:</p>
@@ -426,7 +389,5 @@ setInterval(showHeadline, 13000); // প্রতি 11 সেকেন্ড �
   </div>
   <p>&copy; 2025 Official Website of অকৃত্তিম-২৪. All Rights Reserved.</p>
 </footer>
-
-
 </body>
 </html>
