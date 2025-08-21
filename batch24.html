@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <link rel="icon" type="image/png" href="logo.png.PNG">
+  <meta charset="UTF-8">
+  <title>অকৃত্তিম-২৪</title>
+  <style>
+    /* Headline bar */
+.headline-bar {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #f0f0f0;
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.headline-text {
+  position: absolute;
+  white-space: nowrap;
+  font-size: 18px;
+  font-weight: bold;
+  color: #222;
+  animation: scroll-left 7s linear;
+}
+
+@keyframes scroll-left {
+  0%   { right: -100%; }
+  100% { right: 100%; }
+}
+
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+    }
+
+    body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden; /* যাতে পাশে স্ক্রল না আসে */
+    overflow-y: auto;   /* যাতে উপরে-নিচে স্ক্রল হয় */
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* Watermark effect */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("logo.png.PNG") no-repeat center center;
+    background-size: 500px;   /* লোগোর সাইজ নিয়ন্ত্রণ করবে */
+    opacity: 0.2;            /* জলছাপের স্বচ্ছতা */
+    z-index: -1;              /* সব কনটেন্টের পিছনে রাখবে */
+}
+
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #8dbaff;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
+      height: 65px;
+      width: auto;
+      margin-right: 20px;
+      border-radius: 50%;
+    }
+    .logo a {
+      color: white;
+      font-size: 30px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .menu {
+      display: flex;
+    }
+    .menu a {
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .menu a:hover {
+      background: #000000;
+    }
+
+    /* Sections */
+    .section {
+      display: none;
+      padding: 30px;
+    }
+    .active {
+      display: block;
+    }
+    h2 {
+      text-align: center;
+    }
+
+    /* Home Banner */
+    .banner {
+      height: 400px;
+      width: auto;
+      background: url("banner.png.JPEG") no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+      border-bottom: 4px solid #4CAF50;
+    }
+    .banner h1 {
+      font-size: 40px;
+      
+      padding: 20px 30px;
+      border-radius: 12px;
+    }
+    .banner p {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    /* Cards */
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .card {
+      width: 220px;
+      background: white;
+      border-radius: 12px;
+      margin: 10px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      height: 200px;
+      object-fit: cover;
+    }
+    .btn-group {
+      margin-top: 10px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 6px 12px;
+      margin: 5px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 14px;
+      color: white;
+      transition: 0.3s;
+    }
+    .btn-call { background: #000000; }
+    .btn-email { background: #000000; }
+    .btn:hover { opacity: 0.8; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .menu {
+        flex-direction: column;
+        width: 100%;
+      }
+      .menu a {
+        text-align: center;
+        border-top: 1px solid #ffffff;
+      }
+      .card { width: 45%; }
+    }
+    @media (max-width: 480px) {
+      .card { width: 90%; }
+      .banner h1 { font-size: 28px; }
+    }
+
+    /* Footer Style */
+footer {
+  background: #badcec94;
+  color: #000000;
+  padding: 5px 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+footer p {
+  margin: 5px 0;
+  font-size: 15px;
+}
+
+footer .social-icons {
+  margin-top: 10px;
+}
+
+footer .social-icons a {
+  color: #000000;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.5s;
+}
+
+footer .social-icons a:hover {
+  color: #00aced; /* Hover এ রঙ পরিবর্তন */
+}
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <div class="logo">
+      <img src="logo.png.PNG" alt="Batch Logo">
+      <a href="#" onclick="showSection('home')">অকৃত্তিম - ২৪</a>
+    </div>
+    <div class="menu">
+      <a href="#" onclick="showSection('prefectorial')">PREFECTORIAL BOARD</a>
+      <a href="#" onclick="showSection('coordinators')">BATCH CO-ORDINATOR's PANEL</a>
+      <a href="#" onclick="showSection('members')">BATCH MEMBERS</a>
+      <a href="#" onclick="showSection('partofus')">PART OF US</a>
+    </div>
+  </div>
+
+  <!-- Headline bar -->
+<div class="headline-bar">
+  <div class="headline-text" id="headline"></div>
+</div>
+ 
+  
+  <!-- Home Section -->
+  <div id="home" class="section active">
+    <div class="banner">
+      <div>
+        <h1></h1>
+        <p style="text-align:center;"></p>
+      </div>
+    </div>
+    <p style="text-align:center; margin-top:20px;"></br><br>"আমাদের লক্ষ্যঃ"<br><br>“আমাদের লক্ষ্য হলো দেশের যুবসমাজকে আধুনিক শিক্ষা, প্রযুক্তি ও নৈতিক মানের সমন্বয়ে সমৃদ্ধ করা। আমরা চাই প্রত্যেক শিক্ষার্থী দক্ষ, সৃজনশীল ও সাহসী হয়ে উঠুক, যাতে তারা দেশ ও সমাজের উন্নয়নে গুরুত্বপূর্ণ অবদান রাখতে পারে। আমাদের প্রতিষ্ঠান দৃঢ় বিশ্বাস করে যে শিক্ষা শুধু জ্ঞান অর্জন নয়, বরং মানসিক ও নৈতিক বিকাশের পথ। আমরা সবাইকে সমান সুযোগ দিয়ে প্রতিভা বিকাশে সহায়তা করতে প্রতিশ্রুতিবদ্ধ, যাতে তারা ভবিষ্যতের চ্যালেঞ্জ মোকাবিলা করতে পারে এবং দেশের গৌরব বৃদ্ধি করতে পারে।”“আমাদের লক্ষ্য হলো দেশের যুবসমাজকে আধুনিক শিক্ষা, প্রযুক্তি ও নৈতিক মানের সমন্বয়ে সমৃদ্ধ করা। আমরা চাই প্রত্যেক শিক্ষার্থী দক্ষ, সৃজনশীল ও সাহসী হয়ে উঠুক, যাতে তারা দেশ ও সমাজের উন্নয়নে গুরুত্বপূর্ণ অবদান রাখতে পারে। আমাদের প্রতিষ্ঠান দৃঢ় বিশ্বাস করে যে শিক্ষা শুধু জ্ঞান অর্জন নয়, বরং মানসিক ও নৈতিক বিকাশের পথ। আমরা সবাইকে সমান সুযোগ দিয়ে প্রতিভা বিকাশে সহায়তা করতে প্রতিশ্রুতিবদ্ধ, যাতে তারা ভবিষ্যতের চ্যালেঞ্জ মোকাবিলা করতে পারে এবং দেশের গৌরব বৃদ্ধি করতে পারে।”</p>
+  </div>
+
+  <!-- Batch Co-ordinators Panel -->
+  <div id="coordinators" class="section">
+    <h2>BATCH(24) CO-ORDINATOR's</h2>
+    <div class="container">
+      <div class="card">
+        <img src="WhatsApp Image 2025-08-18 at 6.00.05 PM.jpeg" alt="Coordinator">
+        <h3>M.M FAHIM SHARIF</h3>
+        <p>BATCH CO-ORDINATOR</p>
+        <div class="btn-group">
+          <a href="tel:+8801766081029" class="btn btn-call">📞 CALL</a>
+          <a href="mailto:shariffahim2007@gmail.com" class="btn btn-email">✉️ EMAIL</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="WhatsApp Image 2025-08-18 at 6.06.52 PM.jpeg" alt="Coordinator">
+        <h3>ZIHAD RAHMAN</h3>
+        <p>BATCH CO-ORDINATOR</p>
+        <div class="btn-group">
+          <a href="tel:+8801724796136" class="btn btn-call">📞 CALL</a>
+          <a href="mailto:sumaiya@example.com" class="btn btn-email">✉️ EMAIL</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Members Section -->
+  <div id="members" class="section">
+    <h2>BATCH MEMBERS</h2>
+    <div class="container">
+      <div class="card">
+        <img src="student1.jpg" alt="Member">
+        <h3>ফাহিম শরীফ</h3>
+        <p>Member</p>
+        <div class="btn-group">
+          <a href="tel:+8801911000000" class="btn btn-call">📞 কল</a>
+          <a href="mailto:fahim@example.com" class="btn btn-email">✉️ ইমেইল</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="student2.jpg" alt="Member">
+        <h3>মাহি হাসান</h3>
+        <p>Member</p>
+        <div class="btn-group">
+          <a href="tel:+8801711223344" class="btn btn-call">📞 কল</a>
+          <a href="mailto:mahi@example.com" class="btn btn-email">✉️ ইমেইল</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Part Of Us Section -->
+  <div id="partofus" class="section">
+    <h2>PART OF OUR JOURNEY</h2>
+    <div class="container">
+      <div class="card">
+        <img src="student1.jpg" alt="Member">
+        <h3>ফাহিম শরীফ</h3>
+        <p>Member</p>
+        <div class="btn-group">
+          <a href="tel:+8801911000000" class="btn btn-call">📞 কল</a>
+          <a href="mailto:fahim@example.com" class="btn btn-email">✉️ ইমেইল</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="student2.jpg" alt="Member">
+        <h3>মাহি হাসান</h3>
+        <p>Member</p>
+        <div class="btn-group">
+          <a href="tel:+8801711223344" class="btn btn-call">📞 কল</a>
+          <a href="mailto:mahi@example.com" class="btn btn-email">✉️ ইমেইল</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Prefectorial Board -->
+  <div id="prefectorial" class="section">
+    <h2>PREFECTS OF 2024</h2>
+    <div class="container">
+      <div class="card">
+        <img src="WhatsApp Image 2025-08-18 at 6.20.25 PM.jpeg" alt="Prefect">
+        <h3>JONY ISLAM HRIDOY</h3>
+        <p>SCHOOL PREFECT<br>(S.P)</br></p>
+        <div class="btn-group">
+          <a href="tel:+8801555444333" class="btn btn-call">📞 CALL</a>
+          <a href="mailto:arif@example.com" class="btn btn-email">✉️ EMAIL</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="WhatsApp Image 2025-08-18 at 6.27.58 PM.jpeg" alt="Prefect">
+        <h3>RIFAN HASAN</h3>
+        <p>ASSISTANT SCHOOL PREFECT OF BOYS WING<br>(A.S.P)</br></p>
+        <div class="btn-group">
+          <a href="tel:+8801999888777" class="btn btn-call">📞 CALL</a>
+          <a href="mailto:sabrina@example.com" class="btn btn-email">✉️ EMAIL</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showSection(sectionId) {
+      let sections = document.getElementsByClassName("section");
+      for (let i = 0; i < sections.length; i++) {
+        sections[i].classList.remove("active");
+      }
+      document.getElementById(sectionId).classList.add("active");
+    }
+
+const headlines = [
+  "✨ WELCOME BACK TO OUR CLASS! ✨",
+  "📌 This official webpage of our batch functions as the primary platform for storing and accessing the complete information of all our students.",
+];
+
+let index = 0;
+const headlineElement = document.getElementById("headline");
+
+function showHeadline() {
+  headlineElement.textContent = headlines[index];
+  headlineElement.style.animation = "none"; 
+  void headlineElement.offsetWidth;         
+  headlineElement.style.animation = "scroll-left 10s linear"; 
+
+  index = (index + 1) % headlines.length;
+}
+
+showHeadline();
+setInterval(showHeadline, 13000); // প্রতি 11 সেকেন্ড পর নতুন headline আসবে
+
+ // লেখা সিলেক্ট বন্ধ
+  document.addEventListener('selectstart', function(e) {
+    e.preventDefault();
+  });
+
+  // কপি কমান্ড বন্ধ
+  document.addEventListener('copy', function(e) {
+    e.preventDefault();
+    alert("কপি করা যাবে না!");
+  });
+
+  // রাইট-ক্লিক বন্ধ
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+    alert("Right Click Disabled!");
+  });
+
+  </script>
+
+<!-- Footer Section -->
+<footer>
+  <p>Important Links:</p>
+  <div class="social-icons">
+    <a href="https://www.facebook.com/profile.php?id=100092624018705" target="_blank">🌐অকৃত্তিম-২৪</a>
+    <a href="https://cpskalumni.com/" target="_blank">🌐Alumni Association of CPSK</a>
+  </div>
+  <p>&copy; 2025 Official Website of অকৃত্তিম-২৪. All Rights Reserved.</p>
+</footer>
+
+
+</body>
+</html>
